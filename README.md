@@ -86,3 +86,4 @@ These instructions will help you set up and run the project on your local machin
 
 ### Screenshots
 ![alt text](<Screenshot (171).png>)
+![alt text](<Screenshot image-1.png>)
