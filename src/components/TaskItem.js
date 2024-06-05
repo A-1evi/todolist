@@ -13,7 +13,7 @@ const TaskItem = ({ task }) => {
   };
 
   return (
-    <div className="flex justify-between items-center px-3 text-lg font-semibold py-1 m-4 border-2 border-black bg-[#B380DA] rounded-lg">
+    <div className="flex flex-row justify-between items-center w-full px-3 text-lg font-semibold py-2 m-4 border-2 border-black bg-[#B380DA] rounded-lg">
       {isEditing ? (
         <input
           type="text"
@@ -21,7 +21,7 @@ const TaskItem = ({ task }) => {
           onChange={(e) => setNewText(e.target.value)}
           onBlur={handleEditTask}
           onKeyDown={(e) => e.key === "Enter" && handleEditTask()}
-          className=" p-2 flex-1 bg-[#B380DA] outline-none"
+          className="p-2 flex-1 bg-[#B380DA] outline-none"
         />
       ) : (
         <span
@@ -33,18 +33,18 @@ const TaskItem = ({ task }) => {
           {task.text}
         </span>
       )}
-      <div className="flex h-10 ">
+      <div className="flex mt-2 md:mt-0">
         <button
           onClick={() => setIsEditing(true)}
-          className="bg-[#90D5A9] p-2 mx-2  border-2 border-black rounded-lg"
+          className="bg-[#90D5A9] p-2 mx-1 border-2 border-black rounded-lg"
         >
-          <i class="fa-solid fa-pen-to-square"></i>
+          <i className="fa-solid fa-pen-to-square"></i>
         </button>
         <button
           onClick={() => dispatch(deleteTask(task.id))}
-          className="bg-red-500 px-2  border-2 border-black rounded-lg"
+          className="bg-red-500 p-2 border-2 border-black rounded-lg"
         >
-          <i class="fa-regular fa-trash-can"></i>
+          <i className="fa-regular fa-trash-can"></i>
         </button>
       </div>
     </div>

@@ -6,7 +6,7 @@ const TaskList = () => {
   const tasks = useSelector((store) => store.tasks);
 
   return (
-    <div className="px-6 py-4  mx-auto">
+    <div className="px-4 py-3 mx-auto w-full lg:w-full lg:flex-col md:w-3/4 lg:w-3/4 lg:items-start ">
       {tasks.map((task) => (
         <TaskItem key={task.id} task={task} />
       ))}
