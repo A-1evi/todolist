@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# React To-Do Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple To-Do application built with ReactJS and Redux, allowing users to add, view, edit, and delete tasks. The application uses local storage to persist tasks between sessions.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add tasks
+- View tasks
+- Edit tasks
+- Delete tasks
+- Mark tasks as completed
+- Persistent storage using local storage
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- Redux
+- Tailwind CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+These instructions will help you set up and run the project on your local machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js and npm installed on your machine
+- A web browser
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone https://github.com/yourusername/react-todo-app.git
+    cd react-todo-app
+    ```
 
-### `npm run eject`
+2. **Install dependencies:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Set up Tailwind CSS:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    Follow the [Tailwind CSS installation guide](https://tailwindcss.com/docs/guides/create-react-app) for Create React App. Ensure your `tailwind.config.js` and `src/index.css` are properly configured.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Running the Application
 
-## Learn More
+1. **Start the development server:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ```bash
+    npm start
+    ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Open the application in your browser:**
 
-### Code Splitting
+    The application will automatically open in your default web browser. If it doesn't, navigate to `http://localhost:3000` in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Project Structure
 
-### Analyzing the Bundle Size
+- `src/`
+  - `components/`
+    - `TaskInput.js`: Component for adding new tasks.
+    - `TaskList.js`: Component for displaying the list of tasks.
+    - `TaskItem.js`: Component for individual task item, including edit and delete functionality.
+  - `features/`
+    - `taskSlice.js`: Redux slice for managing tasks state.
+  - `app/`
+    - `store.js`: Redux store configuration.
+  - `App.js`: Main application component.
+  - `index.js`: Entry point for the React application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Usage
 
-### Making a Progressive Web App
+- **Add a Task:**
+  - Enter the task description in the input field and press Enter or click the "Add Task" button.
+- **View Tasks:**
+  - All tasks are displayed in a list format.
+- **Edit a Task:**
+  - Click the "Edit" button next to a task to modify its description.
+- **Delete a Task:**
+  - Click the "Delete" button next to a task to remove it from the list.
+- **Mark a Task as Completed:**
+  - Click on the task description to toggle its completed state.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Screenshots
+![alt text](<Screenshot (171).png>)
